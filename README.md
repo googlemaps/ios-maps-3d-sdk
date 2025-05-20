@@ -3,17 +3,17 @@
 ## Description
 
 This repository contains the Swift package for the
-[Maps 3D SDK for iOS](https://developers.google.com/maps/documentation/ios-sdk).
+[Maps 3D SDK for iOS](https://developers.google.com/maps/documentation/maps-3d/ios-sdk).
 
 ## Requirements
 
 -   [Xcode](https://developer.apple.com/xcode/) version 15.0 or later
 -   An app targeting iOS 15 or later
 -   A Google Maps Platform
-    [project](https://developers.google.com/maps/documentation/ios-sdk/cloud-setup)
+    [project](https://developers.devsite.corp.google.com/maps/documentation/maps-3d/ios-sdk/setup)
     with the Maps 3D SDK for iOS enabled.
 -   An
-    [API key](https://developers.google.com/maps/documentation/ios-sdk/get-api-key)
+    [API key](https://developers.devsite.corp.google.com/maps/documentation/maps-3d/ios-sdk/setup#api-key)
     associated with the project above.
 
 ## Installation
@@ -28,20 +28,20 @@ This repository contains the Swift package for the
     ```
 
 3.  Select the
-    [version](https://developers.google.com/maps/documentation/ios-sdk/versions)
+    [version](https://developers.google.com/maps/documentation/maps-3d/ios-sdk/setup#step_2_create_the_xcode_project_and_install_the)
     of the Maps 3D SDK for iOS that you want to use. For new projects, we
     recommend specifying the latest version and using the "Exact Version"
     option.
 
 4.  Follow the
-    [instructions](https://developers.google.com/maps/documentation/ios-sdk/config#get-key)
+    [instructions](https://developers.google.com/maps/documentation/maps-3d/ios-sdk/setup#step_3_add_the_api_key_to_your_app)
     to add your API key to your app.
 
 ## Documentation
 
 Documentation for the Maps 3D SDK for iOS is available as
-[guides](https://developers.google.com/maps/documentation/ios-sdk/) and
-[reference documentation](https://developers.google.com/maps/documentation/ios-sdk/reference).
+[guides](https://developers.google.com/maps/documentation/maps-3d/ios-sdk) and
+[reference documentation](https://developers.google.com/maps/documentation/maps-3d/ios-sdk/reference).
 
 ## Contributing
 
