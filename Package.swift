@@ -22,8 +22,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "GoogleMaps3D",
-      url: "https://dl.google.com/geosdk/maps3d/0.2.0/GoogleMaps3d_3p.xcframework.zip",
-      checksum: "53c4e3e388034ef65bf80d1b41be7f923ec1c4697aab82e283ed657ecc7511bc"
+      url: "https://dl.google.com/geosdk/maps3d/0.2.1/GoogleMaps3d_3p.xcframework.zip",
+      checksum: "1f45848aa8df010b7c81d39b6ce5df09e8a9a80c8cd1526aa86dc548dd5f3c9e"
     ),
     .target(
       name: "GoogleMaps3DTarget",
