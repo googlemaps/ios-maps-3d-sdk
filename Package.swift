@@ -18,12 +18,18 @@ import PackageDescription
 
 let package = Package(
   name: "GoogleMaps3D", platforms: [.iOS(.v16)],
-  products: [.library(name: "GoogleMaps3D", targets: ["GoogleMaps3DTarget"])], dependencies: [],
+  products: [
+    .library(name: "GoogleMaps3D", targets: ["GoogleMaps3DTarget"]),
+    .library(name: "GoogleMaps3DKit", targets: ["GoogleMaps3DKitTarget"]),
+  ],
+  dependencies: [
+    .package(url: "https://github.com/googlemaps/ios-places-sdk", "11.2.0"..<"12.0.0")
+  ],
   targets: [
     .binaryTarget(
       name: "GoogleMaps3D",
-      url: "https://dl.google.com/geosdk/maps3d/0.2.1/GoogleMaps3d_3p.xcframework.zip",
-      checksum: "1f45848aa8df010b7c81d39b6ce5df09e8a9a80c8cd1526aa86dc548dd5f3c9e"
+      url: "https://dl.google.com/geosdk/swiftpm/1.0.0/google_maps3d.xcframework.zip",
+      checksum: "b25a780bcf843ce4e0d0a57b0525b64d66269efeeb08c3987adf53664dd76829"
     ),
     .target(
       name: "GoogleMaps3DTarget",
@@ -31,6 +37,26 @@ let package = Package(
       path: "Maps3D",
       sources: ["Empty.swift"],
       resources: [.copy("Resources/GoogleMaps3DResources/GoogleMaps3D.bundle")],
+      publicHeadersPath: "Sources",
+      linkerSettings: [
+        .linkedLibrary("sqlite3"),
+        .linkedLibrary("c++"),
+      ]
+    ),
+    .binaryTarget(
+      name: "GoogleMaps3DKit",
+      url: "https://dl.google.com/geosdk/swiftpm/1.0.0/google_maps3d_kit.xcframework.zip",
+      checksum: "495ae2310ed834340e5c66d50f51140e8328bcc258ad24f07edc98b52c15c5e0"
+    ),
+    .target(
+      name: "GoogleMaps3DKitTarget",
+      dependencies: [
+        "GoogleMaps3DKit",
+        "GoogleMaps3DTarget",
+        .product(name: "GooglePlacesSwift", package: "ios-places-sdk"),
+      ],
+      path: "Maps3DKit",
+      sources: ["Empty.swift"],
       publicHeadersPath: "Sources",
       linkerSettings: [
         .linkedLibrary("sqlite3"),
