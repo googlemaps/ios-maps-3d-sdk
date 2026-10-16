@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 //
 // Copyright 2024 Google LLC
 //
@@ -17,7 +17,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "GoogleMaps3D", platforms: [.iOS(.v16)],
+  name: "GoogleMaps3D", platforms: [.iOS(.v17)],
   products: [
     .library(name: "GoogleMaps3D", targets: ["GoogleMaps3DTarget"]),
     .library(name: "GoogleMaps3DKit", targets: ["GoogleMaps3DKitTarget"]),
@@ -28,8 +28,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "GoogleMaps3D",
-      url: "https://dl.google.com/geosdk/swiftpm/1.0.0/google_maps3d.xcframework.zip",
-      checksum: "b25a780bcf843ce4e0d0a57b0525b64d66269efeeb08c3987adf53664dd76829"
+      url: "https://dl.google.com/geosdk/swiftpm/1.1.0/google_maps3d.xcframework.zip",
+      checksum: "76ae64ede078512a57bf74bc9b6db6bc45c992fe92ae58102acb84ceb1b0433d"
     ),
     .target(
       name: "GoogleMaps3DTarget",
@@ -45,8 +45,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "GoogleMaps3DKit",
-      url: "https://dl.google.com/geosdk/swiftpm/1.0.0/google_maps3d_kit.xcframework.zip",
-      checksum: "495ae2310ed834340e5c66d50f51140e8328bcc258ad24f07edc98b52c15c5e0"
+      url: "https://dl.google.com/geosdk/swiftpm/1.1.0/google_maps3d_kit.xcframework.zip",
+      checksum: "42ccb535a7ea8f7ccaebd5b0caeed1c4705d44a1d5be3d9e0fc131ce330f2796"
     ),
     .target(
       name: "GoogleMaps3DKitTarget",
